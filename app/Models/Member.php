@@ -23,4 +23,8 @@ class Member extends Model
     public function memberGroup() {
         return $this->belongsTo(MemberGroup::class);
     }
+
+    public function donations() {
+        return $this->hasMany(Donation::class);
+    }
 }
